@@ -13,9 +13,12 @@
   --neutral-color-120: #828282;
   --neutral-color-130: #d9d9d9;
   --neutral-color-140: #000;
-  
+
   // primary-colors
   --primary-color-50: #4e7ddb;
+
+  // success color
+  --success-color-70: #e2f8f0b3;
 
   // logo colors
   --logo-color-text: #101010;
@@ -25,10 +28,16 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
+  @include mobile {
+    --container-padding: 15px;
+    --container-width: 480px;
+  }
+
   // transition
   --transition: 0.2s ease-in-out;
 
   // z-index
+  --z-index-0: -1;
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;
@@ -42,7 +51,10 @@
   --neutral-color-140: #fff;
   --neutral-color-150: #fff;
 
-    // logo colors
-    --logo-color-text: #fff;
-    --logo-color-circle: #343542;
+  // logo colors
+  --logo-color-text: #fff;
+  --logo-color-circle: #343542;
+
+  // success color
+  --success-color-70: #e2f8f033;
 }
