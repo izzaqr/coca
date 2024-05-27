@@ -31,6 +31,9 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
+  // opacity
+  --opacity-color-10: #fff;
+
   @include mini-desktop {
     --container-width: 1000px;
   }
@@ -71,4 +74,7 @@
 
   // overview colors
   --overview-bg-color: #18181d;
+
+  // opacity
+  --opacity-color-10: rgba(29, 30, 37, .9);
 }
