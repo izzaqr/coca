@@ -33,7 +33,7 @@
   --container-width: 1200px;
 
   // opacity
-  --opacity-color-10: #fff;
+  --opacity-color-10: rgba(255, 255, 255, .9);
 
   @include mini-desktop {
     --container-width: 1000px;
