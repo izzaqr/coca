@@ -62,7 +62,9 @@
     margin-bottom: 19px;
 
     @include tablet {
+      justify-content: center;
       margin-bottom: 0;
+      transform: translateX(-4px);
     }
   }
 
@@ -73,11 +75,10 @@
     @include tablet {
       flex-direction: column;
       align-items: flex-start;
-      gap: 40px;
+      gap: 15px;
     }
 
     @include mobile {
-      flex-direction: column-reverse
     }
 
     &-info {
@@ -126,13 +127,14 @@
     }
 
     @include mobile {
-      gap: 40px 60px;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: none;
+      // gap: 40px 60px;
+      // flex-wrap: wrap;
+      // justify-content: center;
     }
 
     @include small-mobile {
-      text-align: center;
+      // text-align: center;
     }
   }
 
@@ -201,7 +203,7 @@
       @include tablet {
         gap: 42px;
       }
-      
+
       @include mobile {
         flex-direction: column;
         gap: 20px;
@@ -276,4 +278,81 @@
     line-height: 143%;
     color: #fff;
   }
+}
+
+.accordion {
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+
+  @include mobile {
+    display: flex;
+    width: 90%;
+  }
+
+  &-footer__list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+  }
+}
+
+.accordion-list__item {
+  box-shadow: 0 2px 0 0 #fff;
+  background: var(--grey);
+  border: 1px solid #fff;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transition: all 0.4s;
+}
+
+.accordion-list__item--opened.accordion-list__item {
+  background: var(--green);
+}
+
+.accordion-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-list__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+  padding: 20px 20px;
+  background: transparent;
+  transition: all 0.4s;
+}
+
+.accordion-list__control-title {
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 15px;
+  color: #fff;
+}
+
+.accordion-list__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.accordion-list__item--opened .accordion-list__content {
+  transition: all 0.4s;
+}
+
+.accordion-content {
+  padding: 0 45px 40px;
+
+  display: grid;
+  flex-direction: column;
+  height: max-content;
+  transition: all 0.4s;
 }

@@ -9,6 +9,7 @@ import {
   useInsightSlider,
   useTestimonialsSlider,
 } from './components/home/slider.js';
+import { accordion } from './components/accordion.js';
 
 useTheme();
 useBurger();
@@ -16,3 +17,4 @@ stickyHeader();
 usePartnersSlider();
 useInsightSlider();
 useTestimonialsSlider();
+accordion();

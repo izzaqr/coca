@@ -1,0 +1,281 @@
+.hero {
+  padding: 191px 0 78px;
+
+  @include mobile {
+    padding: 140px 0 68px;
+  }
+
+  &__top {
+    padding-bottom: 186px;
+    text-align: center;
+
+    @include tablet {
+      padding-bottom: 86px;
+    }
+
+    @include mobile {
+      padding-bottom: 56px;
+    }
+
+    &::before {
+      top: -20px;
+    }
+
+    &::after {
+      bottom: -320px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--primary-color-30);
+    background-color: #1463ff1a;
+
+    &--popular {
+      color: #fff;
+    }
+
+    @include small-mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__descr {
+    margin: 0 auto 56px;
+    max-width: 903px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__switcher {
+    position: relative;
+    border-radius: 12px;
+    width: 44px;
+    height: 24px;
+    background-color: var(--neutral-color-30);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: inline-block;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: var(--primary-color-30);
+      opacity: 0.6;
+      transition:
+        left var(--transition),
+        opacity var(--transition);
+    }
+
+    &-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &-checkbox {
+      appearance: none;
+    }
+
+    &:has(&-checkbox:checked) {
+      &::before {
+        left: 22px;
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__item {
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 16px;
+    padding: 40px 24px;
+    max-width: 378px;
+
+    @include mini-desktop {
+      max-width: 320px;
+    }
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    &:first-child {
+      @include tablet {
+        order: 2;
+      }
+    }
+
+    &:last-child {
+      @include tablet {
+        order: 3;
+      }
+    }
+
+    &--popular {
+      border: 1px solid var(--primary-color-60);
+      background-color: var(--primary-color-70);
+      transform: translateY(-76px);
+
+      @include tablet {
+        order: 1;
+        transform: inherit;
+      }
+    }
+  }
+
+  &__plans {
+    @include flex-all-between;
+    gap: 30px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &-icon {
+      @include flex-all-center;
+      margin-bottom: 16px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: var(--neutral-color-20);
+
+      &--popular {
+        border-radius: 100px;
+        background-color: var(--primary-color-30);
+
+        @include tablet {
+          order: 1;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 142%;
+      color: var(--neutral-color-100);
+
+      &--popular {
+        color: #fff;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-150);
+    }
+
+    &-price {
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      &--popular {
+        color: #fff;
+      }
+
+      &-text {
+        font-weight: 500;
+        line-height: 162%;
+        color: var(--neutral-color-150);
+
+        &--popular {
+          color: #fff;
+        }
+      }
+    }
+
+    &-list {
+      margin-bottom: 40px;
+
+      &-title {
+        margin-bottom: 16px;
+        font-weight: 700;
+        line-height: 150%;
+        color: var(--neutral-color-100);
+
+        &--popular {
+          color: #fff;
+        }
+      }
+    }
+
+    &-item {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-100);
+
+      &--popular {
+        color: #fff;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        background: url('data:image/svg+xml, %3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M10.0004%2019.5999C15.3023%2019.5999%2019.6004%2015.3018%2019.6004%209.9999C19.6004%204.69797%2015.3023%200.399902%2010.0004%200.399902C4.69846%200.399902%200.400391%204.69797%200.400391%209.9999C0.400391%2015.3018%204.69846%2019.5999%2010.0004%2019.5999ZM14.4489%208.44843C14.9175%207.9798%2014.9175%207.22%2014.4489%206.75137C13.9803%206.28275%2013.2205%206.28275%2012.7519%206.75137L8.80039%2010.7028L7.24892%209.15137C6.78029%208.68274%206.02049%208.68274%205.55186%209.15137C5.08323%209.62%205.08323%2010.3798%205.55186%2010.8484L7.95186%2013.2484C8.42049%2013.7171%209.18029%2013.7171%209.64892%2013.2484L14.4489%208.44843Z%22%20fill%3D%22%2346B277%22%20%2F%3E%0A%3C%2Fsvg%3E');
+        transform: translateY(3px);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &--inaccess {
+        color: var(--neutral-color-150);
+        text-decoration: line-through;
+
+        &::before {
+          background: url('data:image/svg+xml, %3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M10.0004%2019.5999C15.3023%2019.5999%2019.6004%2015.3018%2019.6004%209.9999C19.6004%204.69797%2015.3023%200.399902%2010.0004%200.399902C4.69846%200.399902%200.400391%204.69797%200.400391%209.9999C0.400391%2015.3018%204.69846%2019.5999%2010.0004%2019.5999ZM14.4489%208.44843C14.9175%207.9798%2014.9175%207.22%2014.4489%206.75137C13.9803%206.28275%2013.2205%206.28275%2012.7519%206.75137L8.80039%2010.7028L7.24892%209.15137C6.78029%208.68274%206.02049%208.68274%205.55186%209.15137C5.08323%209.62%205.08323%2010.3798%205.55186%2010.8484L7.95186%2013.2484C8.42049%2013.7171%209.18029%2013.7171%209.64892%2013.2484L14.4489%208.44843Z%22%20fill%3D%22%237E8492%22%20%2F%3E%0A%3C%2Fsvg%3E');
+        }
+      }
+    }
+
+    &-btn {
+      border: 1px solid #ced1d8;
+      border-radius: 100px;
+      padding: 16px 35px;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+      transition: opacity var(--transition);
+
+      &--popular {
+        color: #1d1e25;
+        background-color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &-wrapper {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -16,7 +16,10 @@
   --neutral-color-150: #7e8492;
 
   // primary-colors
+  --primary-color-30: #1463ff;
   --primary-color-50: #4e7ddb;
+  --primary-color-60: #4b628f;
+  --primary-color-70: #161a34;
 
   // success color
   --success-color-70: #e2f8f0b3;
@@ -33,7 +36,7 @@
   --container-width: 1200px;
 
   // opacity
-  --opacity-color-10: rgba(255, 255, 255, .9);
+  --opacity-color-10: rgba(255, 255, 255, 0.9);
 
   @include mini-desktop {
     --container-width: 1000px;
@@ -64,7 +67,9 @@
   --neutral-color-10: #1d1e25;
   --neutral-color-100: #fff;
   --neutral-color-140: #fff;
-  --neutral-color-150: #fff;
+
+  // primary-colors
+  --primary-color-70: #18181d;
 
   // logo colors
   --logo-color-text: #fff;
@@ -77,5 +82,5 @@
   --black-bg-color: #18181d;
 
   // opacity
-  --opacity-color-10: rgba(29, 30, 37, .9);
+  --opacity-color-10: rgba(29, 30, 37, 0.9);
 }
