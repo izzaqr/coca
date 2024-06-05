@@ -6,7 +6,7 @@ export const usePartnersSlider = () => {
   new Swiper('.partners__slider', {
     modules: [Autoplay],
     slidesPerView: 'auto',
-    spaceBetween: 22,
+    spaceBetween: 1,
     loop: true,
     centeredSlides: true,
     autoplay: {
