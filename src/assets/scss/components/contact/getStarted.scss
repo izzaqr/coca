@@ -1,0 +1,146 @@
+.get-started {
+  padding: 76px 0 160px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1440px;
+    padding-right: 0;
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    &-wrapper {
+      position: absolute;
+      left: 5%;
+      min-width: 608px;
+      border: 1px solid var(--neutral-color-40);
+      padding: 56px 48px;
+      background-color: #fff;
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: inherit;
+        left: 0;
+        padding: 36px 28px;
+        min-width: 320px;
+      }
+
+      @include mobile {
+        max-width: 380px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 122%;
+      letter-spacing: -0.02em;
+      color: #1d1e25;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 48px;
+      font-weight: 400;
+      line-height: 167%;
+      color: #7e8492;
+      
+      @include mobile {
+        margin-bottom: 28px;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      color: var(--primary-color-30);
+    }
+
+    &-top {
+      @include flex-all-between;
+      gap: 12px;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+      }
+    }
+
+    &-label {
+      @include flex-column;
+      margin-bottom: 24px;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &-text {
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 500;
+        line-height: 143%;
+        color: #1d1e25;
+
+        @include mobile {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &-input {
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 8px;
+      padding: 10px 14px;
+      width: 100%;
+      height: 44px;
+      font-weight: 400;
+      line-height: 171%;
+      color: #1d1e25;
+
+      &--small {
+        width: 240px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &--textarea {
+        outline: none;
+        height: 134px;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      background: #1d1e25;
+      color: #fff;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
