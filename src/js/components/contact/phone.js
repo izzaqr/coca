@@ -13,6 +13,6 @@ export const usePhone = () => {
         .catch(() => callback('us'));
     },
     utilsScript:
-      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.10/js/intlTelInput.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.10/js/utils.js',
   });
 };
