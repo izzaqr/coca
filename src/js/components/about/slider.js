@@ -14,3 +14,24 @@ export const useAboutSlider = () => {
     },
   });
 };
+
+export const useTeamSlider = () => {
+  new Swiper('.team__slider', {
+    modules: [Navigation],
+    slidesPerView: '1',
+    spaceBetween: 32,
+    loop: true,
+    navigation: {
+      nextEl: '.team__slider-btns-right',
+      prevEl: '.team__slider-btns-left',
+    },
+    breakpoints: {
+      400: {
+        slidesPerView: '2',
+      },
+      810: {
+        slidesPerView: '3',
+      },
+    },
+  });
+};
