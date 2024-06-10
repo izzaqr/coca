@@ -1,12 +1,12 @@
-import '/scss/contact.scss';
+import '/scss/about.scss';
 
 // components
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 import { useStickyHeader } from './components/useStickyHeader.js';
-import { usePhone } from './components/contact/phone.js';
+import { useAboutSlider } from './components/about/slider.js';
 
 useTheme();
 useBurger();
 useStickyHeader();
-usePhone();
+useAboutSlider();

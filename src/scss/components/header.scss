@@ -8,6 +8,7 @@
 
   &__container {
     @include flex-all-between;
+    user-select: none;
   }
 
   &__logo {

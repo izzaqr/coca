@@ -1,4 +1,4 @@
-export const stickyHeader = () => {
+export const useStickyHeader = () => {
   let lastScroll = 0;
   const defaultOffset = 200;
   const header = document.querySelector('.header');
