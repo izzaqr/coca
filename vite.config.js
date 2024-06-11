@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/coca/',
   server: {
     port: 3000,
+    open: true,
   },
   publicDir: './src/assets',
   build: {
@@ -19,6 +20,7 @@ export default defineConfig({
         pricing: './src/pricing.html',
         contact: './src/contact.html',
         about: './src/about.html',
+        blog: './src/blog.html',
       },
     },
   },
