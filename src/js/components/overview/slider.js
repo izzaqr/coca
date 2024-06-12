@@ -25,3 +25,27 @@ export const useOverviewSlider = () => {
     },
   });
 };
+
+export const useArticlesSlider = () => {
+  new Swiper('.articles__slider', {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    loop: true,
+    navigation: {
+      nextEl: '.articles__btn--next',
+      prevEl: '.articles__btn--prev',
+    },
+    // breakpoints: {
+    //   576: {
+    //     slidesPerView: '1.3',
+    //   },
+    //   720: {
+    //     slidesPerView: '1.7',
+    //   },
+    //   992: {
+    //     slidesPerView: 'auto',
+    //   },
+    // },
+  });
+};
